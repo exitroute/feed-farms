@@ -20,7 +20,7 @@ const StyledNav = styled(Cluster)`
 const links = [
   { href: "/about", label: "About" },
   { href: "/labourers", label: "Labourers" },
-  { href: "/farmers", label: "Farmers" },
+  { href: "/farmersView", label: "Farmers" },
   { href: "/contact", label: "Contact Us" },
   { href: "/login", label: "Sign Up / Login" }
 ].map((link) => {
