@@ -1,4 +1,5 @@
 import App from "next/app";
+import Head from "next/head";
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 
@@ -31,6 +32,12 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <>
+        <Head>
+          <link
+            href="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css"
+            rel="stylesheet"
+          />
+        </Head>
         <GlobalStyle />
         <Component {...pageProps} />
       </>
