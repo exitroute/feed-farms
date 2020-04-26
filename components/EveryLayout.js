@@ -17,30 +17,27 @@ export const Stack = styled.div`
 `;
 
 export const Box = styled.div`
-  --s1: ${(props) => props.space || "1.5rem"};
-  padding: var(--s1);
+  ${(props) =>
+    props.invert
+      ? `
+    background-color: var(--color-light);
+    filter: invert(100%);
+  `
+      : ""}
+  padding: var(${(props) => props.space || "--s1"});
   border: ${(props) => props.borderThin || 0} solid;
-  --color-light: #fff;
-  --color-dark: #000;
   color: var(--color-dark);
   background-color: var(--color-light);
-
   & * {
     color: inherit;
-  }
-
-  & .invert {
-    color: var(--color-light);
-    background-color: var(--color-dark);
   }
 `;
 
 export const Center = styled.div`
-  --measure: ${(props) => props.measure || "60ch"};
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--measure);
+  max-width: var(${(props) => props.measure || "--measure"});
 
   padding-left: ${(props) => props.gutter || ""};
   padding-right: ${(props) => props.gutter || ""};
@@ -86,5 +83,30 @@ export const Cluster = styled.div`
 
   & > * > * {
     margin: calc(var(--space) / 2);
+  }
+`;
+
+export const Cover = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: ${(props) => props.minHeight || "100vh"};
+  padding: ${(props) => props.padding || "1rem"};
+
+  & > * {
+    margin-top: ${(props) => props.space || "1rem"};
+    margin-bottom: ${(props) => props.space || "1rem"};
+  }
+
+  & > :first-child:not(${(props) => props.centered || "h1"}) {
+    margin-top: 0;
+  }
+
+  & > :last-child:not(${(props) => props.centered || "h1"}) {
+    margin-bottom: 0;
+  }
+
+  & > ${(props) => props.centered || "h1"} {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 `;
