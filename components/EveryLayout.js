@@ -110,3 +110,29 @@ export const Cover = styled.div`
     margin-bottom: auto;
   }
 `;
+
+export const Frame = styled.div`
+  display: block;
+  --n: 9; /* width */
+  --d: 16; /* height */
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+
+  & > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  & > img,
+  & > video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
