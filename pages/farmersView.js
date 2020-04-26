@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Cover, Center, Stack, Box, Switcher } from "../components/EveryLayout";
 import Layout from "../components/Layout";
 
@@ -45,7 +46,11 @@ const FarmerView = () => (
         <DashBoardButtons>Search</DashBoardButtons>
         <DashBoardButtons>Calendar</DashBoardButtons>
         <DashBoardButtons>History</DashBoardButtons>
-        <DashBoardButtons>Profile</DashBoardButtons>
+        <DashBoardButtons type="button">
+          <Link href="./farmers">
+            <a>Profile</a>
+          </Link>
+        </DashBoardButtons>
         <DashBoardButtons>Requests</DashBoardButtons>
       </Box>
       <Cover>
