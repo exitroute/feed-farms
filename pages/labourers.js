@@ -19,12 +19,12 @@ const Labourers = () => (
     <Cover centered={"div"} minHeight={"50vh"}>
       <div>
         <Center>
-          <h1>Profile</h1>
+          <h1>Labourer Profile</h1>
           <List>
             <li>Name</li>
             <li>Location</li>
             <li>Availability</li>
-            <li>Skill</li>
+            <li>Skills</li>
             <li>Experience</li>
             <li>Right to Work</li>
             <li>Team or Individual</li>

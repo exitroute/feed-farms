@@ -19,7 +19,7 @@ const Farmers = () => (
     <Cover centered={"div"} minHeight={"50vh"}>
       <div>
         <Center>
-          <h1>Profile</h1>
+          <h1>Farmer Profile</h1>
           <List>
             <li>Name</li>
             <li>Location</li>
